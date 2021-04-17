@@ -1,13 +1,16 @@
 :root {
   --primary-background-color: #ffffff;
   --secondary-background-color: #2f303a;
+  --accent-background-color: #f5f4fa;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
+  --accent-text-color: #ffffff;
   --accent-color: #2196f3;
-}
+  --secondary-accent-color: #000000;
+  }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: Roboto; sans-serif;
   font-size: 14px;
@@ -17,8 +20,7 @@ body {
   list-style: none;
 }
 /* Скрытые заголовки студия + портфолио */
-.features-title,
-.portfolio .title {
+.visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -33,7 +35,7 @@ body {
 
 /* header */
 .header-logo {
-  color: #000000;
+  color: var(--secondary-accent-color);
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -60,7 +62,7 @@ body {
   background-color: var(--secondary-background-color);
 }
 .hero-title {
-  color: #ffffff;
+  color: var(--accent-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -69,8 +71,8 @@ body {
   text-transform: uppercase;
 }
 .hero-btn {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -104,7 +106,7 @@ body {
 
 /* team */
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--accent-background-color);
   text-align: center;
 }
 .team-title {
@@ -129,7 +131,7 @@ body {
   background-color: var(--secondary-background-color);
 }
 .footer-logo {
-  color: #ffffff;
+  color: var(--accent-text-color);
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -139,10 +141,14 @@ body {
   color: var(--accent-color);
 }
 .footer-contacts .link {
-  color: #ffffff;
+  color: var(--accent-text-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+.link.mail,
+.link.tel {
+  opacity: 0.6;
 }
 .link {
   text-decoration: none;
@@ -162,7 +168,7 @@ body {
 
 /* button */
 .filters-btn {
-  background-color: #f5f4fa;
+  background-color: var(--accent-background-color);
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -173,7 +179,7 @@ body {
 .filters-btn:hover,
 .filters-btn:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--accent-text-color);
 }
 
 /* projects */
